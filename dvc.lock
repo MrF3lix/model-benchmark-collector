@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  collect:
+    cmd: python src/collect.py
+    deps:
+    - path: src/collect.py
+      hash: md5
+      md5: fcb8b9d96bb6120be9de1ad9476b8229
+      size: 262
+    params:
+      params.yaml:
+        collect.base_url: https://paperswithcode.com/api/v1
+        collect.output: data/collect
+    outs:
+    - path: data/collect
+      hash: md5
+      md5: d751713988987e9331980363e24189ce.dir
+      size: 0
+      nfiles: 0

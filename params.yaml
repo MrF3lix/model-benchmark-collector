@@ -1,0 +1,3 @@
+collect:
+  base_url: https://paperswithcode.com/api/v1
+  output: data/collect

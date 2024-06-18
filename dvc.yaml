@@ -1,0 +1,10 @@
+stages:
+  collect:
+    cmd: python src/collect.py
+    deps:
+    - src/collect.py
+    params:
+    - collect.base_url
+    - collect.output
+    outs:
+    - data/collect
