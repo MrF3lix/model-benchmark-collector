@@ -5,14 +5,33 @@ stages:
     deps:
     - path: src/collect.py
       hash: md5
-      md5: fcb8b9d96bb6120be9de1ad9476b8229
-      size: 262
+      md5: 194bfa2a8c9f42bad475653e39782997
+      size: 3833
     params:
       params.yaml:
-        collect.base_url: https://paperswithcode.com/api/v1
         collect.output: data/collect
+        collect.paperswithcode_token: fd0cfe3f97dbe2d96daa5080802520b6b9c05a22
     outs:
     - path: data/collect
+      hash: md5
+      md5: 11474a6f7488cb348a9d2e8abb9eb48e.dir
+      size: 21419380
+      nfiles: 3
+  upload:
+    cmd: python src/upload.py
+    deps:
+    - path: src/upload.py
+      hash: md5
+      md5: 7809524d62ac68dcf2b6de8d84d55f46
+      size: 2116
+    params:
+      params.yaml:
+        upload.output: data/upload
+        upload.supabase_key: 
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlqZnljZWZnc3BvcWptb2NubnJ5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcxODg3MjQxNCwiZXhwIjoyMDM0NDQ4NDE0fQ.IhnJzlgEWVHx4PeWTIPdK1jka74LIQAt0jX3DYE1mHo
+        upload.supabase_url: https://yjfycefgspoqjmocnnry.supabase.co
+    outs:
+    - path: data/upload
       hash: md5
       md5: d751713988987e9331980363e24189ce.dir
       size: 0

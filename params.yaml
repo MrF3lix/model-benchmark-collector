@@ -1,3 +1,7 @@
 collect:
-  base_url: https://paperswithcode.com/api/v1
   output: data/collect
+  paperswithcode_token: <ADD PWC TOKEN>
+upload:
+  output: data/upload
+  supabase_url: <ADD SUPABASE URL>
+  supabase_key: <ADD SUPABASE KEY>

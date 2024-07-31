@@ -4,7 +4,18 @@ stages:
     deps:
     - src/collect.py
     params:
-    - collect.base_url
     - collect.output
+    - collect.paperswithcode_token
     outs:
     - data/collect
+    frozen: true
+  upload:
+    cmd: python src/upload.py
+    deps:
+    - src/upload.py
+    params:
+    - upload.output
+    - upload.supabase_url
+    - upload.supabase_key
+    outs:
+    - data/upload
